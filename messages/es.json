@@ -1,0 +1,58 @@
+{
+  "Index": {
+    "Header": {
+      "Home": "Inicio",
+      "About": "Sobre mí",
+      "Projects": "Proyectos",
+      "Skills": "Habilidades",
+      "Experience": "Experiencia",
+      "Contact": "Contacto"
+    }
+  },
+  "Intro": {
+    "Title": "Hola, mi nombre es Johans.",
+    "Text": "Soy un desarrollador web <b>full-stack developer</b> con <b>+5 años</b> de experiencia. Disfruto construyendo <i>sitios</i> y <i>apps</i>. Mi enfoque está en el mundo de <u>Javascript/Typescript</u>.",
+    "Contact": "Contáctame aquí",
+    "Download": "Descargar CV"
+  },
+  "About": {
+    "Title": "Sobre mí",
+    "Bio1": "Soy un entusiasta comprometido con el código y un programador apasionado, profundamente dedicado a mantener los principios de las mejores prácticas y la arquitectura de código limpio.",
+    "Bio2": "Más allá del ámbito del código y los proyectos, me impulsa una sed insaciable de crecimiento personal y profesional. Cada día presenta una oportunidad para superar al yo de ayer, mientras me esfuerzo incansablemente por la auto-superación. Este viaje es una encarnación de mi compromiso perdurable con el dominio tanto en facetas personales como profesionales.",
+    "Bio3": "Mi reverencia por la programación va más allá de su función utilitaria, es un medio a través del cual estimulo mi intelecto, conquisto desafíos y fomento la creatividad. Esta profesión no es solo un medio de vida; es un compromiso de por vida que nutre continuamente mi mente a través de la resolución de problemas y obstáculos dinámicos.",
+    "Bio4": "Acompáñame mientras exploramos la intrincada sinfonía del código, la creatividad y el crecimiento inquebrantable. Transformemos colaborativamente desafíos en triunfos y líneas de código en soluciones excepcionales."
+  },
+  "Projects": {
+    "Title": "Mis Proyectos",
+    "Revius": "Permite a los usuarios crear y editar reseñas sobre ciertos productos en Internet, también cuenta con los datos de reseñas de otras páginas web de minoristas. (Todavía en desarrollo)",
+    "Taskify": "Aplicación de Lista de Tareas, en la que puedes agregar, editar, eliminar y completar tareas. También te permite arrastrar y soltar tus tareas para reorganizarlas o completarlas.",
+    "Mochilas Mineras": "Página de inicio para Mochilas Mineras. Es una marca comercial en Chile. Contiene información empresarial, un formulario de contacto y una lista de productos.",
+    "Tic Tac Toe Game": "Juego simple de Tres en Línea hecho con React, tiene la capacidad de calcular el ganador y reiniciar el juego."
+  },
+  "Skills": {
+    "Title": "Mis habilidades"
+  },
+  "Experience": {
+    "Title": "Mi Experiencia",
+    "Graduated Computer Science": {
+      "Title": "Graduado de Ingeniería en Informática",
+      "Description": "Me gradué después de 4 años de estudio. Inmediatamente encontré trabajo como desarrollador web."
+    },
+    "Freelance Web Developer": {
+      "Title": "Desarrollador Web Independiente",
+      "Description": "Trabajé como desarrollador web independiente durante aproximadamente 3 años, donde creé varias páginas y sitios web, páginas de inicio y un sistema de mantenimiento de usuarios para un servidor privado del juego Lineage 2. También amplié mis habilidades para abarcar el desarrollo full stack."
+    },
+    "Full-Stack Developer": {
+      "Title": "Desarrollador Full-Stack",
+      "Description": "Actualmente soy un desarrollador full stack que trabaja en Evalueserve Chile. Mi conjunto de herramientas incluye React, Next.js, TypeScript, Tailwind, Prisma y MongoDB."
+    }
+  },
+  "Contact": {
+    "Title": "Contáctame",
+    "Subtitle": "Por favor contáctame directamente a <a>johansneirap@gmail.com</a> o a través de este formulario.",
+    "EmailPlaceholder": "Tu email",
+    "MessagePlaceholder": "Tu mensaje",
+    "Submit": "Enviar",
+    "EmailSuccess": "Email enviado satisfactoriamente!"
+  }
+}

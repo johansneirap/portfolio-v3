@@ -2,9 +2,10 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import reviusImg from "@/public/revius.png";
+import mochilasMinerasImg from "@/public/mochilasmineras.png";
+import taskifyImg from "@/public/taskify.png";
+import tictactoeImg from "@/public/tictactoe.png";
 
 export const links = [
   {
@@ -35,26 +36,26 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Graduated Computer Science",
+    location: "Viña del Mar, CL",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I graduated after 4 years of studying. I immediately found a job as a web developer.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2018 - 2021",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Freelance Web Developer",
+    location: "Villa Alemana, CL",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I worked as a freelance web developer for about 3 years where I made a couple of web pages and sites, landing pages, and a user maintainer for a private server of Lineage 2 game. I also upskilled to the full stack.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2018 - 2021",
   },
   {
     title: "Full-Stack Developer",
-    location: "Houston, TX",
+    location: "Viña del Mar, CL",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I'm now a full-stack developer working at Evalueserve Chile. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB.",
     icon: React.createElement(FaReact),
     date: "2021 - present",
   },
@@ -62,25 +63,28 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
-    description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+    title: "Revius",
+    tags: ["React", "Next.js", "Tailwind", "NestJS", "Prisma", "Postgres"],
+    imageUrl: reviusImg,
+    siteUrl: "https://revius.cl",
   },
   {
-    title: "rmtDev",
-    description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+    title: "Taskify",
+    tags: ["React", "Next.js", "Typescript"],
+    imageUrl: taskifyImg,
+    siteUrl: "https://taskify.johansneira.site",
   },
   {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+    title: "Mochilas Mineras",
+    tags: ["React", "TypeScript", "Next.js", "Tailwind"],
+    imageUrl: mochilasMinerasImg,
+    siteUrl: "https://mochilasmineras.cl",
+  },
+  {
+    title: "Tic Tac Toe Game",
+    tags: ["React", "TypeScript", "Vite", "CSS"],
+    imageUrl: tictactoeImg,
+    siteUrl: "https://tictactoe.johansneira.site",
   },
 ] as const;
 

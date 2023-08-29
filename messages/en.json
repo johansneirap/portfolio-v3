@@ -1,0 +1,58 @@
+{
+  "Index": {
+    "Header": {
+      "Home": "Home",
+      "About": "About",
+      "Projects": "Projects",
+      "Skills": "Skills",
+      "Experience": "Experience",
+      "Contact": "Contact"
+    }
+  },
+  "Intro": {
+    "Title": "Hello, I'm Johans.",
+    "Text": "I'm a <b>full-stack developer</b> with <b>+5 years</b> of experience. I enjoy building <i>sites</i> & <i>apps</i>. My focus is in <u>JS/TS</u> world.",
+    "Contact": "Contact me here",
+    "Download": "Download CV"
+  },
+  "About": {
+    "Title": "About me",
+    "Bio1": "I am a dedicated code enthusiast and a passionate programmer, deeply committed to upholding the principles of best practices and clean code architecture.",
+    "Bio2": "Beyond the realm of code and projects, I am ceaselessly driven by an insatiable thirst for personal and professional growth. Each day presents an opportunity to surpass yesterday's version of myself, as I tirelessly strive for self-improvement. This journey embodies my enduring commitment to mastery in both personal and professional aspects.",
+    "Bio3": "My reverence for programming goes beyond its utilitarian function; it is a medium through which I stimulate my intellect, conquer challenges, and foster creativity. This profession is not just a livelihood; it is a lifelong commitment that continually nurtures my mind through problem-solving and dynamic challenges.",
+    "Bio4": "Join me as we explore the intricate symphony of code, creativity, and unwavering growth. Let's collaboratively transform challenges into triumphs and lines of code into exceptional solutions."
+  },
+  "Projects": {
+    "Title": "My Projects",
+    "Revius": "Lets users create and edit reviews about certain products on the internet, it also has the data of the reviews from other retailers websites. (Still in development)",
+    "Taskify": "Todo List App, in there you can add, edit, delete, and complete tasks. It also lets you drag and drop your tasks to reorder or complete them.",
+    "Mochilas Mineras": "Landing page for Mochilas Mineras. It is a business mark in Chile. It has business info, a contact form and a list of products.",
+    "Tic Tac Toe Game": "Simple Tic Tac Toe Game made using react, it has the ability to calculate the winner and restart the game"
+  },
+  "Skills": {
+    "Title": "Skills"
+  },
+  "Experience": {
+    "Title": "Experience",
+    "Graduated Computer Science": {
+      "Title": "Graduado de Ingeniería en Informática",
+      "Description": "I graduated after 4 years of studying. I immediately found a job as a web developer."
+    },
+    "Freelance Web Developer": {
+      "Title": "Freelance Web Developer",
+      "Description": "I worked as a freelance web developer for about 3 years where I made a couple of web pages and sites, landing pages, and a user maintainer for a private server of Lineage 2 game. I also upskilled to the full stack."
+    },
+    "Full-Stack Developer": {
+      "Title": "Full-Stack Developer",
+      "Description": "I'm now a full-stack developer working at Evalueserve Chile. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB."
+    }
+  },
+  "Contact": {
+    "Title": "Contact me",
+    "Subtitle": "Please contact me directly at <a>johansneirap@gmail.com</a> or through this form.",
+    "EmailPlaceholder": "Your email",
+    "MessagePlaceholder": "Your message",
+    "Submit": "Submit",
+    "EmailSuccess": "Email sent successfully!"
+  }
+}

@@ -9,11 +9,12 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { useTranslations } from "next-intl";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-
+  const t = useTranslations("Intro");
   return (
     <section
       ref={ref}
@@ -58,16 +59,16 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl sm:text-left"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Johans.</span> I&apos;m a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">+5 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">Javascript/Typescript </span>
-        <span>stuff</span>.
+        <span className="font-bold">{t("Title")}</span>
+        {t.rich("Text", {
+          b: (chunks) => <span className="font-bold">{chunks}</span>,
+          i: (chunks) => <span className="italic">{chunks}</span>,
+          u: (chunks) => <span className="underline">{chunks}</span>,
+        })}
       </motion.h1>
 
       <motion.div
@@ -86,7 +87,7 @@ export default function Intro() {
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{" "}
+          {t("Contact")}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
@@ -95,7 +96,7 @@ export default function Intro() {
           href="/CV-es.pdf"
           download
         >
-          Download CV{" "}
+          {t("Download")}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
 
