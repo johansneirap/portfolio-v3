@@ -43,18 +43,17 @@ export default function Contact() {
       </p>
 
       <form
+        id="contactForm"
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
-          console.log({ formData });
-          const { data = "DATA", error } = await sendEmail(formData);
-
+          const { data, error } = await sendEmail(formData);
+          console.log(data);
           if (error) {
             toast.error(error);
             return;
           }
-          console.log(data);
-
           toast.success(t("EmailSuccess"));
+          (document.getElementById("contactForm") as HTMLFormElement).reset();
         }}
       >
         <input
