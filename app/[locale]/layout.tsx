@@ -9,6 +9,7 @@ import Footer from "@/components/footer";
 import { Toaster } from "react-hot-toast";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +17,30 @@ const inter = Inter({ subsets: ["latin"] });
 //   return [{ locale: "en" }, { locale: "es" }];
 // }
 
-export const metadata = {
-  title: "Johans | Personal Portfolio",
-  description: "Johans is a full-stack web developer based in Chile",
+export const metadata: Metadata = {
+  title: "Johans Neira | Personal Portfolio",
+  description: "Johans Neira is a full-stack web developer based in Chile.",
+  openGraph: {
+    title: "Johans Neira | Personal Portfolio",
+    description: "Johans Neira is full-stack web developer based in Chile.",
+    url: "https://johansneira.site",
+    siteName: "Johans Neira Portfolio",
+    images: [
+      {
+        url: "https://media.licdn.com/dms/image/C4E03AQFo-K5gupVuRg/profile-displayphoto-shrink_400_400/0/1634866894344?e=1698883200&v=beta&t=XufXnYKvWz6-PZYKukgG4oCRrUmz9u4AOLFyfKHR8Og",
+        width: 800,
+        height: 600,
+      },
+      {
+        url: "https://media.licdn.com/dms/image/C4E03AQFo-K5gupVuRg/profile-displayphoto-shrink_400_400/0/1634866894344?e=1698883200&v=beta&t=XufXnYKvWz6-PZYKukgG4oCRrUmz9u4AOLFyfKHR8Og",
+        width: 1800,
+        height: 1600,
+        alt: "alt image",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default async function RootLayout({
