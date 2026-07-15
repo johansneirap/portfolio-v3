@@ -1,34 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio (Next.js)
 
-## Getting Started
+Repositorio del portafolio personal construido con Next.js 13 (App Router) y TypeScript.
 
-First, run the development server:
+**Descripción**: sitio estático/dinámico con secciones de presentación, proyectos, experiencia y contacto. Incluye optimización de imágenes mediante el optimizador de Next y soporte i18n con `next-intl`.
 
+**Características principales**
+- Interfaz con Tailwind CSS
+- Optimización de imágenes con `next/image`
+- Soporte de idiomas con `next-intl` (carpeta `messages/`)
+- Componentes reutilizables en `components/`
+
+**Requisitos**
+- Node.js v18+ recomendado
+- npm, yarn o pnpm
+
+**Comandos útiles**
 ```bash
+# instalar dependencias
+npm install
+
+# desarrollo (hot-reload)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
+# build de producción
+npm run build
+
+# ejecutar build en modo producción local
+npm run start
+
+# lint (eslint)
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Estructura importante**
+- `app/` - rutas y layout (App Router)
+- `components/` - componentes React reutilizables (e.g., `components/intro.tsx`)
+- `public/` - assets públicos (coloca aquí la imagen de perfil si quieres evitar hotlinking)
+- `lib/` - datos y hooks
+- `messages/` - traducciones (`en.json`, `es.json`)
+- `next.config.js` - configuración de Next (dominios permitidos para imágenes)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Si ves diferencias entre local y producción en las imágenes (por ejemplo, `/ _next/image?url=...` apuntando a LinkedIn), revisa:
+- `components/intro.tsx` y `app/[locale]/layout.tsx` (metadatos) — pueden referenciar URLs externas temporales.
+- Considera mover la imagen a `public/` o alojarla en un CDN permanente para evitar fallos por URLs expiradas.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Despliegue**
+- Este proyecto se despliega fácilmente en Vercel. Conecta tu repo y Vercel detectará Next.js automáticamente.
+- Asegúrate de que el commit desplegado contiene los cambios esperados (compara SHA en el dashboard de Vercel).
 
-## Learn More
+**Contribuciones**
+- Abrir issues o pull requests con mejoras o correcciones. Mantener cambios focalizados y pruebas cuando aplique.
 
-To learn more about Next.js, take a look at the following resources:
+Si quieres, puedo actualizar la imagen de perfil para que esté en `public/` y actualizar las referencias en el código.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
