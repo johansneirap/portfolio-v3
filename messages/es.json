@@ -25,9 +25,9 @@
   "Projects": {
     "Title": "Mis Proyectos",
     "Revius": "Permite a los usuarios crear y editar reseñas sobre ciertos productos en Internet, también cuenta con los datos de reseñas de otras páginas web de minoristas. (Todavía en desarrollo)",
-    "Taskify": "Aplicación de Lista de Tareas, en la que puedes agregar, editar, eliminar y completar tareas. También te permite arrastrar y soltar tus tareas para reorganizarlas o completarlas.",
-    "Mochilas Mineras": "Página de inicio para Mochilas Mineras. Es una marca comercial en Chile. Contiene información empresarial, un formulario de contacto y una lista de productos.",
-    "Tic Tac Toe Game": "Juego simple de Tres en Línea hecho con React, tiene la capacidad de calcular el ganador y reiniciar el juego."
+    "SortedContainers": "Librería de código abierto para JavaScript/TypeScript con SortedList, SortedSet y SortedMap — sin dependencias en tiempo de ejecución, inspirada en las sortedcontainers de Python.",
+    "Datoteca": "Librería TypeScript para generar datos de prueba realistas y localizados de Chile",
+    "Falta 1": "PWA hecha con React y TypeScript, permite a los usuarios crear y buscar eventos deportivos en su ciudad, también tiene un sistema de chat y un sistema de notificaciones."
   },
   "Skills": {
     "Title": "Mis habilidades"
@@ -44,7 +44,24 @@
     },
     "Full-Stack Developer": {
       "Title": "Desarrollador Full-Stack",
-      "Description": "Actualmente soy un desarrollador full stack que trabaja en Evalueserve Chile. Mi conjunto de herramientas incluye React, Next.js, TypeScript, Tailwind, Prisma y MongoDB."
+      "Description": "Trabajé como desarrollador full stack en Evalueserve Chile. Mi conjunto de herramientas incluye React, Next.js, TypeScript, Tailwind, Prisma y MongoDB."
+    },
+
+    "Software Developer at Evalueserve Chile":{
+      "Title": "Desarrollador de Software en Evalueserve Chile",
+      "Description": "Trabajé como desarrollador full-stack en aplicaciones para clientes como Diageo, Heineken y Gates Ventures, con foco en visualización de datos y dashboards de análisis para la toma de decisiones."
+    },
+    "Senior Developer at Evalueserve Chile":{
+      "Title": "Desarrollador Senior en Evalueserve Chile",
+      "Description": "Como desarrollador senior, trabajé en aplicaciones full-stack para clientes como Walmart US, Intuit India y McDonald's US, integrando grandes cantidades de datos para la generación de dashboards y visualizaciones avanzadas."
+    },
+    "Senior Software Engineer | Tech Lead at BICE Hipotecaria":{
+      "Title": "Ingeniero de Software Senior | Líder Técnico en BICE Hipotecaria",
+      "Description": "Comencé construyendo Carpeta Digital, un sistema interno para gestionar documentos asociados a créditos, y liderando la migración del sistema de autenticación desde Keycloak on-premise a Auth0 para más de 15 mil clientes. Luego, como Tech Lead, lideré un equipo de 6 desarrolladores en proyectos de integración durante la fusión de Bice y Security, incluyendo la incorporación de la pasarela de pago Toku para más de 30 mil clientes."
+    },
+    "Senior Software Engineer at Scotiabank Chile":{
+      "Title": "Ingeniero de Software Senior en Scotiabank Chile",
+      "Description": "Desarrollo de software frontend y backend, participando en un proyecto de privacidad de datos para backoffice, un botón de pago web y un proyecto de adquisición de flujo enfocado en Agentic AI Development."
     }
   },
   "Contact": {

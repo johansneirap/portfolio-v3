@@ -3,8 +3,9 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import reviusImg from "@/public/revius.png";
-import mochilasMinerasImg from "@/public/mochilasmineras.png";
-import taskifyImg from "@/public/taskify.png";
+import faltaunoImg from "@/public/faltauno.png";
+import sortedImg from "@/public/sortedcollections.png";
+import datotecaImg from "@/public/datoteca.png";
 import tictactoeImg from "@/public/tictactoe.png";
 
 export const links = [
@@ -52,39 +53,63 @@ export const experiencesData = [
     date: "2018 - 2021",
   },
   {
-    title: "Full-Stack Developer",
+    title: "Software Developer at Evalueserve Chile",
     location: "Viña del Mar, CL",
     description:
       "I'm now a full-stack developer working at Evalueserve Chile. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2021 - 2022",
+  },
+  {
+    title: "Senior Developer at Evalueserve Chile",
+    location: "Viña del Mar, CL",
+    description:
+      "As a senior developer, I worked on more complex projects and led a small team of developers. I also mentored junior developers and helped them improve their skills.",
+    icon: React.createElement(FaReact),
+    date: "2022 - 2023",
+  },
+  {
+    title: "Senior Software Engineer | Tech Lead at BICE Hipotecaria",
+    location: "Providencia, Santiago, CL",
+    description:
+      "I started by building Carpeta Digital, an internal system for managing credit-related documents, and led the migration of the authentication system from on-premise Keycloak to Auth0 for over 15,000 clients. Later, as Tech Lead, I led a team of 6 developers on integration projects during the Bice and Security merger, including rolling out the Toku payment gateway for over 30,000 clients.",
+    icon: React.createElement(FaReact),
+    date: "2024 - 206",
+  },
+  {
+    title: "Senior Software Engineer at Scotiabank Chile",
+    location: "Remote, Villa Alemana, CL",
+    description:
+      "Focused on developing and maintaining internal systems for the bank, including a document management system and a customer relationship management system. I also worked on integrating third-party services and APIs to enhance the bank's digital offerings.",
+    icon: React.createElement(FaReact),
+    date: "2026 - present",
   },
 ] as const;
 
 export const projectsData = [
   {
+    title: "SortedContainers",
+    tags: ["Open-source", "JavaScript", "Typescript"],
+    imageUrl: sortedImg,
+    siteUrl: "https://johansneirap.github.io/sorted-collections/",
+  },
+  {
+    title: "Datoteca",
+    tags: ["Open-source", "TypeScript", "JavaScript"],
+    imageUrl: datotecaImg,
+    siteUrl: "https://johansneirap.github.io/datoteca/",
+  },
+  {
+    title: "Falta 1",
+    tags: ["React", "TypeScript", "PWA", "Tailwind"],
+    imageUrl: faltaunoImg,
+    siteUrl: "https://www.faltauno.lat/",
+  },
+  {
     title: "Revius",
     tags: ["React", "Next.js", "Tailwind", "NestJS", "Prisma", "Postgres"],
     imageUrl: reviusImg,
     siteUrl: "https://revius.cl",
-  },
-  {
-    title: "Taskify",
-    tags: ["React", "Next.js", "Typescript"],
-    imageUrl: taskifyImg,
-    siteUrl: "https://taskify.johansneira.site",
-  },
-  {
-    title: "Mochilas Mineras",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind"],
-    imageUrl: mochilasMinerasImg,
-    siteUrl: "https://mochilasmineras.cl",
-  },
-  {
-    title: "Tic Tac Toe Game",
-    tags: ["React", "TypeScript", "Vite", "CSS"],
-    imageUrl: tictactoeImg,
-    siteUrl: "https://tictactoe.johansneira.site",
   },
 ] as const;
 

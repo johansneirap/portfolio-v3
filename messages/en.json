@@ -25,9 +25,9 @@
   "Projects": {
     "Title": "My Projects",
     "Revius": "Lets users create and edit reviews about certain products on the internet, it also has the data of the reviews from other retailers websites. (Still in development)",
-    "Taskify": "Todo List App, in there you can add, edit, delete, and complete tasks. It also lets you drag and drop your tasks to reorder or complete them.",
-    "Mochilas Mineras": "Landing page for Mochilas Mineras. It is a business mark in Chile. It has business info, a contact form and a list of products.",
-    "Tic Tac Toe Game": "Simple Tic Tac Toe Game made using react, it has the ability to calculate the winner and restart the game"
+    "SortedContainers": "Open-source library for JavaScript/TypeScript with SortedList, SortedSet, and SortedMap — zero runtime dependencies, inspired by Python's sortedcontainers.",
+    "Datoteca": "TypeScript library for generating realistic and localized test data for Chile",
+    "Falta 1": "PWA made with React and TypeScript, it allows users to create and search for sports events in their city, it also has a chat system and a notification system."
   },
   "Skills": {
     "Title": "Skills"
@@ -44,7 +44,24 @@
     },
     "Full-Stack Developer": {
       "Title": "Full-Stack Developer",
-      "Description": "I'm now a full-stack developer working at Evalueserve Chile. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB."
+      "Description": "I worked as a full-stack developer working at Evalueserve Chile. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB."
+    },
+
+    "Software Developer at Evalueserve Chile":{
+      "Title": "Software Developer at Evalueserve Chile",
+      "Description": "I worked as a full-stack developer on applications for clients like Diageo, Heineken, and Gates Ventures, focusing on data visualization and analytics dashboards for decision-making."
+    },
+    "Senior Developer at Evalueserve Chile":{
+      "Title": "Senior Developer at Evalueserve Chile",
+      "Description": "As a senior developer, I worked on full-stack applications for clients like Walmart US, Intuit India, and McDonald's US, integrating large amounts of data to build dashboards and advanced visualizations."
+    },
+    "Senior Software Engineer | Tech Lead at BICE Hipotecaria":{
+      "Title": "Senior Software Engineer | Tech Lead at BICE Hipotecaria",
+      "Description": "I started by building Carpeta Digital, an internal system for managing credit-related documents, and led the migration of the authentication system from on-premise Keycloak to Auth0 for over 15,000 clients. Later, as Tech Lead, I led a team of 6 developers on integration projects during the Bice and Security merger, including rolling out the Toku payment gateway for over 30,000 clients."
+    },
+    "Senior Software Engineer at Scotiabank Chile":{
+      "Title": "Senior Software Engineer at Scotiabank Chile",
+      "Description": "Frontend and backend software development, working on a data privacy project for backoffice, a web payment button, and a flow acquisition project focused on Agentic AI Development."
     }
   },
   "Contact": {
