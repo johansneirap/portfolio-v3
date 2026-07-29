@@ -1,71 +1,116 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
+
+function toIndex(i: number) {
+  return i.toString().padStart(2, "0");
+}
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
   const t = useTranslations("Index.Header");
-  const locale = useLocale();
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const activeIndex = links.findIndex((l) => l.name === activeSection);
+
+  const handleSelect = (name: (typeof links)[number]["name"]) => {
+    setActiveSection(name);
+    setTimeOfLastClick(Date.now());
+    setMobileOpen(false);
+  };
 
   return (
     <header className="z-[999] relative">
-      <motion.div
-        className={clsx(
-          " sm:w-[36rem] fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75 ",
-          { "sm:w-[41rem]": locale === "es" }
-        )}
-        initial={{ y: -100, x: "-50%", opacity: 0 }}
-        animate={{ y: 0, x: "-50%", opacity: 1 }}
-      ></motion.div>
-
-      <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
-          {links.map((link) => (
-            <motion.li
-              className="h-3/4 flex items-center justify-center relative"
+      {/* Desktop: clearance-dial rail */}
+      <nav
+        className="hidden sm:flex fixed left-0 top-0 h-screen w-16 z-[999] flex-col items-center justify-center gap-7 border-r border-steel-700/70 bg-graphite-900/90 backdrop-blur-sm"
+        aria-label="Chamber navigation"
+      >
+        {links.map((link, i) => {
+          const isActive = link.name === activeSection;
+          return (
+            <Link
               key={link.hash}
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+              href={link.hash}
+              onClick={() => handleSelect(link.name)}
+              className="group relative flex flex-col items-center py-1"
             >
-              <Link
+              {isActive && (
+                <motion.span
+                  layoutId="dial-indicator"
+                  className="absolute left-0 top-0 h-full w-[2px] bg-brass-500"
+                  transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                />
+              )}
+              <span
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
-                  {
-                    "text-gray-950 dark:text-gray-200":
-                      activeSection === link.name,
-                  }
+                  "plaque-label tabular-nums transition-colors",
+                  isActive
+                    ? "text-brass-500"
+                    : "text-steel-600 group-hover:text-steel-400"
                 )}
-                href={link.hash}
-                onClick={() => {
-                  setActiveSection(link.name);
-                  setTimeOfLastClick(Date.now());
-                }}
               >
+                {toIndex(i)}
+              </span>
+              <span className="pointer-events-none absolute left-full top-1/2 ml-3 -translate-y-1/2 whitespace-nowrap border border-steel-700 bg-graphite-800 px-2.5 py-1.5 plaque-label text-steel-200 opacity-0 transition-opacity duration-150 group-hover:opacity-100">
                 {t(link.name)}
-
-                {link.name === activeSection && (
-                  <motion.span
-                    className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
-                    layoutId="activeSection"
-                    transition={{
-                      type: "spring",
-                      stiffness: 380,
-                      damping: 30,
-                    }}
-                  ></motion.span>
-                )}
-              </Link>
-            </motion.li>
-          ))}
-        </ul>
+              </span>
+            </Link>
+          );
+        })}
       </nav>
+
+      {/* Mobile: instrument strip */}
+      <div className="sm:hidden fixed top-0 left-0 right-0 z-[999] border-b border-steel-700/70 bg-graphite-900/95 backdrop-blur-sm">
+        <button
+          className="flex h-12 w-full items-center justify-between px-4"
+          onClick={() => setMobileOpen((v) => !v)}
+          aria-expanded={mobileOpen}
+        >
+          <span className="plaque-label text-brass-500 tabular-nums">
+            {toIndex(Math.max(activeIndex, 0))} — {t(activeSection)}
+          </span>
+          <span className="plaque-label text-steel-400">
+            {mobileOpen ? t("MobileClose") : t("MobileOpen")}
+          </span>
+        </button>
+        <AnimatePresence>
+          {mobileOpen && (
+            <motion.ul
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="overflow-hidden border-t border-steel-700/70"
+            >
+              {links.map((link, i) => (
+                <li key={link.hash}>
+                  <Link
+                    href={link.hash}
+                    onClick={() => handleSelect(link.name)}
+                    className={clsx(
+                      "flex items-center gap-3 px-4 py-3 plaque-label border-b border-steel-700/40 last:border-b-0",
+                      link.name === activeSection
+                        ? "text-brass-500"
+                        : "text-steel-400"
+                    )}
+                  >
+                    <span className="tabular-nums">{toIndex(i)}</span>
+                    {t(link.name)}
+                  </Link>
+                </li>
+              ))}
+            </motion.ul>
+          )}
+        </AnimatePresence>
+      </div>
     </header>
   );
 }

@@ -6,17 +6,22 @@
       "Projects": "Projects",
       "Skills": "Skills",
       "Experience": "Experience",
-      "Contact": "Contact"
+      "Contact": "Contact",
+      "MobileOpen": "Chambers",
+      "MobileClose": "Close"
     }
   },
   "Intro": {
     "Title": "Hello, I'm Johans.",
     "Text": "I'm a <b>full-stack developer</b> with <b>+5 years</b> of experience. I enjoy building <i>sites</i> & <i>apps</i>. My focus is in <u>JS/TS</u> world.",
     "Contact": "Contact me here",
-    "Download": "Download CV"
+    "Download": "Download CV",
+    "StatusLocked": "Verifying credentials",
+    "StatusUnlocked": "Access granted"
   },
   "About": {
     "Title": "About me",
+    "Kicker": "Identity file",
     "Bio1": "I am a dedicated code enthusiast and a passionate programmer, deeply committed to upholding the principles of best practices and clean code architecture.",
     "Bio2": "Beyond the realm of code and projects, I am ceaselessly driven by an insatiable thirst for personal and professional growth. Each day presents an opportunity to surpass yesterday's version of myself, as I tirelessly strive for self-improvement. This journey embodies my enduring commitment to mastery in both personal and professional aspects.",
     "Bio3": "My reverence for programming goes beyond its utilitarian function; it is a medium through which I stimulate my intellect, conquer challenges, and foster creativity. This profession is not just a livelihood; it is a lifelong commitment that continually nurtures my mind through problem-solving and dynamic challenges.",
@@ -24,16 +29,21 @@
   },
   "Projects": {
     "Title": "My Projects",
+    "Kicker": "Deposit boxes",
+    "BoxLabel": "Box {number}",
     "Revius": "Lets users create and edit reviews about certain products on the internet, it also has the data of the reviews from other retailers websites. (Still in development)",
-    "SortedContainers": "Open-source library for JavaScript/TypeScript with SortedList, SortedSet, and SortedMap — zero runtime dependencies, inspired by Python's sortedcontainers.",
+    "Sorted Collections": "Open-source library for JavaScript/TypeScript with SortedList, SortedSet, and SortedMap — zero runtime dependencies, inspired by Python's sortedcontainers.",
     "Datoteca": "TypeScript library for generating realistic and localized test data for Chile",
     "Falta 1": "PWA made with React and TypeScript, it allows users to create and search for sports events in their city, it also has a chat system and a notification system."
   },
   "Skills": {
-    "Title": "Skills"
+    "Title": "Skills",
+    "Kicker": "Clearance card"
   },
   "Experience": {
     "Title": "Experience",
+    "Kicker": "Access log",
+    "Stat": "45,000+ clients across migrated systems",
     "Graduated Computer Science": {
       "Title": "Graduado de Ingeniería en Informática",
       "Description": "I graduated after 4 years of studying. I immediately found a job as a web developer."
@@ -66,6 +76,7 @@
   },
   "Contact": {
     "Title": "Contact me",
+    "Kicker": "Access request console",
     "Subtitle": "Please contact me directly at <a>johansneirap@gmail.com</a> or through this form.",
     "EmailPlaceholder": "Your email",
     "MessagePlaceholder": "Your message",

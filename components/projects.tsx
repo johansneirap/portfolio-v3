@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./section-heading";
+import Threshold from "./threshold";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
 import { useSectionInView } from "@/lib/hooks";
@@ -11,13 +11,15 @@ export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.5);
   const t = useTranslations("Projects");
   return (
-    <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
-      <SectionHeading>{t("Title")}</SectionHeading>
-      <div>
+    <section ref={ref} id="projects" className="w-full max-w-4xl scroll-mt-24 px-4">
+      <Threshold
+        section="Projects"
+        title={t("Title")}
+        context={t("Kicker")}
+      />
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {projectsData.map((project, index) => (
-          <React.Fragment key={index}>
-            <Project {...project} />
-          </React.Fragment>
+          <Project key={project.title} index={index} {...project} />
         ))}
       </div>
     </section>

@@ -1,5 +1,4 @@
 import React from "react";
-import { FaPaperPlane } from "react-icons/fa";
 import { experimental_useFormStatus as useFormStatus } from "react-dom";
 
 export default function SubmitBtn({ text }: { text: string }) {
@@ -8,15 +7,20 @@ export default function SubmitBtn({ text }: { text: string }) {
   return (
     <button
       type="submit"
-      className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65"
+      className="group flex h-12 w-full items-center justify-center gap-2 bg-brass-500 text-sm font-medium uppercase tracking-wide text-void transition-colors hover:bg-brass-300 disabled:cursor-not-allowed disabled:bg-steel-600 disabled:text-steel-400 sm:w-40"
       disabled={pending}
     >
       {pending ? (
-        <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>
+        <span className="h-4 w-4 animate-spin rounded-full border-2 border-void border-b-transparent" />
       ) : (
         <>
           {text}
-          <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
+          <span
+            aria-hidden
+            className="transition-transform group-hover:translate-x-1"
+          >
+            →
+          </span>
         </>
       )}
     </button>

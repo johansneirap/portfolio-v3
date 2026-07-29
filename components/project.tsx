@@ -1,77 +1,85 @@
 "use client";
 
-import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
-type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = (typeof projectsData)[number] & { index: number };
+
+function KeyholeIcon() {
+  return (
+    <svg
+      width="12"
+      height="12"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden
+      className="shrink-0"
+    >
+      <circle cx="12" cy="9" r="4.5" stroke="currentColor" strokeWidth="2" />
+      <path d="M12 13.5L8.5 21H15.5L12 13.5Z" fill="currentColor" />
+    </svg>
+  );
+}
 
 export default function Project({
   title,
   siteUrl,
   tags,
   imageUrl,
+  index,
 }: ProjectProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.33 1"],
-  });
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   const t = useTranslations("Projects");
   return (
     <motion.div
-      ref={ref}
-      style={{
-        scale: scaleProgess,
-        opacity: opacityProgess,
+      className="group border border-steel-700 bg-graphite-900 transition-transform duration-300 hover:-translate-y-1"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-10%" }}
+      transition={{
+        duration: 0.5,
+        delay: Math.min(index * 0.08, 0.24),
+        ease: [0.16, 1, 0.3, 1],
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
     >
-      <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <Link href={siteUrl} target="_blank">
-            <h3 className="text-2xl font-semibold">{title}</h3>
-          </Link>
+      <Link href={siteUrl} target="_blank" className="block">
+        <div className="relative aspect-[16/10] overflow-hidden border-b border-steel-700 bg-void">
+          <Image
+            src={imageUrl}
+            alt={`${title} — project screenshot`}
+            quality={95}
+            className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
+            sizes="(max-width: 640px) 100vw, 50vw"
+            fill
+          />
+          <div className="absolute inset-0 bg-void/35 transition-opacity duration-500 group-hover:opacity-0" />
+        </div>
 
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
-            {t(title)}
-          </p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
-            {tags.map((tag, index) => (
+        <div className="p-5 transition-transform duration-300 sm:p-6 group-hover:translate-x-1">
+          <div className="mb-2 flex items-center gap-2 plaque-label text-steel-400">
+            <KeyholeIcon />
+            <span>
+              {t("BoxLabel", { number: (index + 1).toString().padStart(2, "0") })}
+            </span>
+          </div>
+          <h3 className="font-display text-xl font-semibold text-steel-200 transition-colors group-hover:text-brass-300">
+            {title}
+          </h3>
+          <p className="mt-2 leading-relaxed text-steel-400">{t(title)}</p>
+          <ul className="mt-4 flex flex-wrap gap-2">
+            {tags.map((tag, i) => (
               <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
-                key={index}
+                key={i}
+                className="plaque-label border border-steel-700 px-2 py-1 text-steel-400"
               >
                 {tag}
               </li>
             ))}
           </ul>
         </div>
-        <Link href={siteUrl} target="_blank">
-          <Image
-            src={imageUrl}
-            alt="Project I worked on"
-            quality={95}
-            className="absolute hidden sm:block top-8 -right-40 w-[29.25rem] rounded-t-lg shadow-2xl
-        transition 
-        group-hover:scale-[1.04]
-        group-hover:-translate-x-3
-        group-hover:translate-y-3
-        group-hover:-rotate-2
-
-        group-even:group-hover:translate-x-3
-        group-even:group-hover:translate-y-3
-        group-even:group-hover:rotate-2
-
-        group-even:right-[initial] group-even:-left-40"
-          />
-        </Link>
-      </section>
+      </Link>
     </motion.div>
   );
 }

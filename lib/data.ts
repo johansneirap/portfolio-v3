@@ -1,12 +1,7 @@
-import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
 import reviusImg from "@/public/revius.png";
 import faltaunoImg from "@/public/faltauno.png";
 import sortedImg from "@/public/sortedcollections.png";
 import datotecaImg from "@/public/datoteca.png";
-import tictactoeImg from "@/public/tictactoe.png";
 
 export const links = [
   {
@@ -41,7 +36,6 @@ export const experiencesData = [
     location: "Viña del Mar, CL",
     description:
       "I graduated after 4 years of studying. I immediately found a job as a web developer.",
-    icon: React.createElement(LuGraduationCap),
     date: "2018 - 2021",
   },
   {
@@ -49,7 +43,6 @@ export const experiencesData = [
     location: "Villa Alemana, CL",
     description:
       "I worked as a freelance web developer for about 3 years where I made a couple of web pages and sites, landing pages, and a user maintainer for a private server of Lineage 2 game. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
     date: "2018 - 2021",
   },
   {
@@ -57,7 +50,6 @@ export const experiencesData = [
     location: "Viña del Mar, CL",
     description:
       "I'm now a full-stack developer working at Evalueserve Chile. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB.",
-    icon: React.createElement(FaReact),
     date: "2021 - 2022",
   },
   {
@@ -65,7 +57,6 @@ export const experiencesData = [
     location: "Viña del Mar, CL",
     description:
       "As a senior developer, I worked on more complex projects and led a small team of developers. I also mentored junior developers and helped them improve their skills.",
-    icon: React.createElement(FaReact),
     date: "2022 - 2023",
   },
   {
@@ -73,22 +64,20 @@ export const experiencesData = [
     location: "Providencia, Santiago, CL",
     description:
       "I started by building Carpeta Digital, an internal system for managing credit-related documents, and led the migration of the authentication system from on-premise Keycloak to Auth0 for over 15,000 clients. Later, as Tech Lead, I led a team of 6 developers on integration projects during the Bice and Security merger, including rolling out the Toku payment gateway for over 30,000 clients.",
-    icon: React.createElement(FaReact),
-    date: "2024 - 206",
+    date: "2024 - 2026",
   },
   {
     title: "Senior Software Engineer at Scotiabank Chile",
     location: "Remote, Villa Alemana, CL",
     description:
       "Focused on developing and maintaining internal systems for the bank, including a document management system and a customer relationship management system. I also worked on integrating third-party services and APIs to enhance the bank's digital offerings.",
-    icon: React.createElement(FaReact),
     date: "2026 - present",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "SortedContainers",
+    title: "Sorted Collections",
     tags: ["Open-source", "JavaScript", "Typescript"],
     imageUrl: sortedImg,
     siteUrl: "https://johansneirap.github.io/sorted-collections/",
