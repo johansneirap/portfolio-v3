@@ -8,21 +8,16 @@ import Link from "next/link";
 
 type ProjectProps = (typeof projectsData)[number] & { index: number };
 
-function KeyholeIcon() {
-  return (
-    <svg
-      width="12"
-      height="12"
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden
-      className="shrink-0"
-    >
-      <circle cx="12" cy="9" r="4.5" stroke="currentColor" strokeWidth="2" />
-      <path d="M12 13.5L8.5 21H15.5L12 13.5Z" fill="currentColor" />
-    </svg>
-  );
-}
+const LANG_COLORS: Record<string, string> = {
+  JavaScript: "#f1e05a",
+  TypeScript: "#3178c6",
+  React: "#61dafb",
+  Tailwind: "#38bdf8",
+  NestJS: "#e0234e",
+  Prisma: "#9f8fef",
+  Postgres: "#336791",
+  PWA: "#a78bfa",
+};
 
 export default function Project({
   title,
@@ -34,7 +29,7 @@ export default function Project({
   const t = useTranslations("Projects");
   return (
     <motion.div
-      className="group border border-steel-700 bg-graphite-900 transition-transform duration-300 hover:-translate-y-1"
+      className="group border border-border-700 bg-surface-900 transition-transform duration-300 hover:-translate-y-1"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-10%" }}
@@ -45,7 +40,7 @@ export default function Project({
       }}
     >
       <Link href={siteUrl} target="_blank" className="block">
-        <div className="relative aspect-[16/10] overflow-hidden border-b border-steel-700 bg-void">
+        <div className="relative aspect-[16/10] overflow-hidden border-b border-border-700 bg-ink">
           <Image
             src={imageUrl}
             alt={`${title} — project screenshot`}
@@ -54,26 +49,34 @@ export default function Project({
             sizes="(max-width: 640px) 100vw, 50vw"
             fill
           />
-          <div className="absolute inset-0 bg-void/35 transition-opacity duration-500 group-hover:opacity-0" />
         </div>
 
-        <div className="p-5 transition-transform duration-300 sm:p-6 group-hover:translate-x-1">
-          <div className="mb-2 flex items-center gap-2 plaque-label text-steel-400">
-            <KeyholeIcon />
-            <span>
-              {t("BoxLabel", { number: (index + 1).toString().padStart(2, "0") })}
+        <div className="p-5 sm:p-6">
+          <p className="font-mono text-xs text-fg-muted">
+            johansneirap/
+            <span className="text-fg-secondary group-hover:text-link-500">
+              {title.toLowerCase().replace(/\s+/g, "-")}
             </span>
-          </div>
-          <h3 className="font-display text-xl font-semibold text-steel-200 transition-colors group-hover:text-brass-300">
+          </p>
+          <h3 className="mt-1 font-mono text-lg font-bold text-fg-primary">
             {title}
           </h3>
-          <p className="mt-2 leading-relaxed text-steel-400">{t(title)}</p>
-          <ul className="mt-4 flex flex-wrap gap-2">
+          <p className="mt-2 font-body leading-relaxed text-fg-secondary">
+            {t(title)}
+          </p>
+          <ul className="mt-4 flex flex-wrap gap-3">
             {tags.map((tag, i) => (
               <li
                 key={i}
-                className="plaque-label border border-steel-700 px-2 py-1 text-steel-400"
+                className="flex items-center gap-1.5 font-mono text-xs text-fg-muted"
               >
+                {LANG_COLORS[tag] && (
+                  <span
+                    aria-hidden
+                    className="h-2 w-2 rounded-full"
+                    style={{ backgroundColor: LANG_COLORS[tag] }}
+                  />
+                )}
                 {tag}
               </li>
             ))}

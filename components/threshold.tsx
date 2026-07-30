@@ -12,7 +12,7 @@ type ThresholdProps = {
 };
 
 function toIndex(i: number) {
-  return i.toString().padStart(2, "0");
+  return i + 1;
 }
 
 export default function Threshold({
@@ -25,24 +25,24 @@ export default function Threshold({
 
   return (
     <motion.div
-      className="relative left-1/2 my-16 w-screen -translate-x-1/2 border-y border-steel-700/60 bg-graphite-800 py-6 sm:my-24"
-      initial={{ opacity: 0, y: 24 }}
+      className="mb-8 mt-16 w-full border-b border-border-700 pb-3 sm:mt-24"
+      initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-10%" }}
-      transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
     >
-      <div className="mx-auto flex w-full max-w-3xl flex-col gap-2 px-4 sm:flex-row sm:items-baseline sm:justify-between sm:px-8">
-        <div className="flex items-baseline gap-4">
-          <span className="plaque-label tabular-nums text-brass-500">
-            {toIndex(Math.max(index, 0))}
-          </span>
-          <h2 className="font-display text-lg font-semibold uppercase tracking-wide text-steel-200 sm:text-xl">
-            {title}
-          </h2>
-        </div>
-        <div className="flex items-baseline gap-4 plaque-label text-steel-400">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
+        <h2 className="section-head text-fg-primary">
+          <span className="text-fg-muted">{toIndex(Math.max(index, 0))}.</span>{" "}
+          {title}
+        </h2>
+        <div className="flex items-baseline gap-4 font-mono text-xs text-fg-muted">
           {context && <span>{context}</span>}
-          {stat && <span className="text-brass-300">{stat}</span>}
+          {stat && (
+            <span className="diff-add px-1.5 py-0.5">
+              <span aria-hidden>+</span> {stat}
+            </span>
+          )}
         </div>
       </div>
     </motion.div>

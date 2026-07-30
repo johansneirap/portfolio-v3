@@ -13,7 +13,7 @@ export default function About() {
     <section ref={ref} id="about" className="w-full max-w-3xl scroll-mt-24 px-4">
       <Threshold section="About" title={t("Title")} context={t("Kicker")} />
       <motion.div
-        className="bevel-inset space-y-4 bg-graphite-900 px-6 py-8 leading-7 text-steel-200 sm:px-10 sm:py-10 sm:text-[1.0625rem] sm:leading-8"
+        className="space-y-4 border border-border-700 bg-surface-900 px-6 py-8 font-body leading-7 text-fg-secondary sm:px-10 sm:py-10 sm:text-[1.0625rem] sm:leading-8"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-10%" }}
@@ -23,6 +23,9 @@ export default function About() {
         <p>{t("Bio3")}</p>
         <p>{t("Bio2")}</p>
         <p>{t("Bio4")}</p>
+        <p className="font-mono text-xs text-fg-muted">
+          SEE ALSO: auth0(7), keycloak(7), toku-gateway(7)
+        </p>
       </motion.div>
     </section>
   );

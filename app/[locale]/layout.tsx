@@ -1,30 +1,25 @@
 import Header from "@/components/header";
 import "./globals.css";
-import { Space_Grotesk, DM_Sans, IBM_Plex_Mono } from "next/font/google";
+import { JetBrains_Mono, Inter } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import LocaleSwitch from "@/components/locale-switch";
 import Footer from "@/components/footer";
+import CommandPalette from "@/components/command-palette";
 import { Toaster } from "react-hot-toast";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
-const spaceGrotesk = Space_Grotesk({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-display",
-});
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-body",
-});
-
-const plexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "700"],
   variable: "--font-mono",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-body",
 });
 
 export const metadata: Metadata = {
@@ -58,9 +53,9 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`!scroll-smooth ${spaceGrotesk.variable} ${dmSans.variable} ${plexMono.variable}`}
+      className={`!scroll-smooth ${jetbrainsMono.variable} ${inter.variable}`}
     >
-      <body className="font-body bg-void text-steel-200 relative selection:bg-brass-500 selection:text-void pt-12 sm:pt-0 sm:pl-16">
+      <body className="font-body bg-ink text-fg-primary relative selection:bg-link-500 selection:text-ink pt-10">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ActiveSectionContextProvider>
             <Header />
@@ -70,15 +65,16 @@ export default async function RootLayout({
               position="top-right"
               toastOptions={{
                 style: {
-                  background: "#1f2226",
-                  color: "#b8bcc1",
-                  border: "1px solid #3a3f46",
-                  borderRadius: "2px",
+                  background: "#17181b",
+                  color: "#e4e4e0",
+                  border: "1px solid #30363d",
+                  borderRadius: "0px",
                   fontFamily: "var(--font-mono)",
                   fontSize: "0.8125rem",
                 },
               }}
             />
+            <CommandPalette />
             <LocaleSwitch />
           </ActiveSectionContextProvider>
         </NextIntlClientProvider>

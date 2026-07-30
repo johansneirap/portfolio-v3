@@ -6,9 +6,7 @@
       "Projects": "Proyectos",
       "Skills": "Habilidades",
       "Experience": "Experiencia",
-      "Contact": "Contacto",
-      "MobileOpen": "Cámaras",
-      "MobileClose": "Cerrar"
+      "Contact": "Contacto"
     }
   },
   "Intro": {
@@ -30,7 +28,6 @@
   "Projects": {
     "Title": "Mis Proyectos",
     "Kicker": "Cajas de depósito",
-    "BoxLabel": "Caja {number}",
     "Revius": "Permite a los usuarios crear y editar reseñas sobre ciertos productos en Internet, también cuenta con los datos de reseñas de otras páginas web de minoristas. (Todavía en desarrollo)",
     "Sorted Collections": "Librería de código abierto para JavaScript/TypeScript con SortedList, SortedSet y SortedMap — sin dependencias en tiempo de ejecución, inspirada en las sortedcontainers de Python.",
     "Datoteca": "Librería TypeScript para generar datos de prueba realistas y localizados de Chile",
@@ -82,5 +79,17 @@
     "MessagePlaceholder": "Tu mensaje",
     "Submit": "Enviar",
     "EmailSuccess": "Email enviado satisfactoriamente!"
+  },
+  "Palette": {
+    "Open": "Abrir paleta de comandos",
+    "Placeholder": "Escribe un comando o busca una sección...",
+    "NoResults": "Sin resultados",
+    "DownloadCv": "Descargar CV",
+    "CopyEmail": "Copiar email",
+    "CopiedEmail": "Email copiado al portapapeles",
+    "SwitchToEs": "Cambiar idioma a español",
+    "SwitchToEn": "Cambiar idioma a inglés",
+    "OpenGithub": "Abrir GitHub",
+    "OpenLinkedin": "Abrir LinkedIn"
   }
 }

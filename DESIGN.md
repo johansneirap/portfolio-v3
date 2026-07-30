@@ -1,43 +1,42 @@
 <!-- SEED: established with the user before implementation; re-run /impeccable document once the build lands to capture the actual tokens and components. -->
 
 ---
-name: Johans Neira — The Vault
-description: A career in access control and financial infrastructure, staged as a walk through a working vault.
+name: Johans Neira — The Manual
+description: A career read as a technical document — man page, RFC, and git log — proven by real numbers, not a marketing hero.
 colors:
-  void: "#0b0c0d"
-  graphite-900: "#16181b"
-  graphite-800: "#1f2226"
-  steel-700: "#2b2f34"
-  steel-600: "#3a3f46"
-  steel-400: "#818991"
-  steel-200: "#b8bcc1"
-  paper: "#f4f2ee"
-  brass-700: "#8a6435"
-  brass-500: "#b8874a"
-  brass-300: "#d9b479"
-  verdigris-500: "#5c8a72"
-  alert-500: "#c96156"
+  ink: "#0a0a0a"
+  surface-900: "#111214"
+  surface-800: "#17181b"
+  border-700: "#262a2e"
+  border-600: "#30363d"
+  fg-muted: "#747c87"
+  fg-secondary: "#9198a1"
+  fg-primary: "#e4e4e0"
+  link-500: "#58a6ff"
+  diff-add-500: "#3fb950"
+  diff-add-bg: "rgba(63,185,80,0.08)"
+  diff-remove-500: "#f85149"
+  diff-remove-bg: "rgba(248,81,73,0.08)"
 typography:
-  display:
-    fontFamily: "Space Grotesk, IBM Plex Sans, sans-serif"
-    fontSize: "clamp(2.25rem, 6vw, 5rem)"
-    fontWeight: 600
-    lineHeight: 1.05
-    letterSpacing: "-0.01em"
+  mono:
+    fontFamily: "JetBrains Mono, ui-monospace, monospace"
   body:
-    fontFamily: "DM Sans, IBM Plex Sans, sans-serif"
+    fontFamily: "Inter, system-ui, sans-serif"
     fontSize: "1.0625rem"
     fontWeight: 400
-    lineHeight: 1.65
+    lineHeight: 1.7
+  sectionHead:
+    fontFamily: "{typography.mono.fontFamily}"
+    fontSize: "0.9375rem"
+    fontWeight: 700
+    letterSpacing: "0.02em"
+    textTransform: "uppercase"
   label:
-    fontFamily: "IBM Plex Mono, ui-monospace, monospace"
+    fontFamily: "{typography.mono.fontFamily}"
     fontSize: "0.8125rem"
     fontWeight: 500
-    letterSpacing: "0.08em"
 rounded:
   none: "0px"
-  sm: "2px"
-  md: "4px"
 spacing:
   xs: "8px"
   sm: "16px"
@@ -45,137 +44,119 @@ spacing:
   lg: "64px"
   xl: "112px"
 components:
-  button-primary:
-    backgroundColor: "{colors.brass-500}"
-    textColor: "{colors.void}"
-    rounded: "{rounded.sm}"
-    padding: "14px 32px"
-  button-primary-hover:
-    backgroundColor: "{colors.brass-300}"
-  button-secondary:
-    backgroundColor: "transparent"
-    textColor: "{colors.steel-200}"
-    rounded: "{rounded.sm}"
-    padding: "14px 32px"
+  button-flag:
+    border: "1px solid {colors.border-600}"
+    textColor: "{colors.fg-primary}"
+    fontFamily: "{typography.mono.fontFamily}"
+    padding: "13px 28px"
+  button-flag-hover:
+    backgroundColor: "{colors.fg-primary}"
+    textColor: "{colors.ink}"
 ---
 
-# Design System: The Vault
+# Design System: The Manual
 
 ## Overview
 
-**Creative North Star: "The Working Vault"**
+**Creative North Star: "The Manual"**
 
-Johans's career reads as an actual vault: a graphite chamber holding polished-steel machinery, brass instrumentation, and the quiet confidence of something built to hold other people's money and identities safely. This is not a bank's marketing site — no navy, no gold leaf, no ceremonial trust badges. It's the mechanism room behind that facade: the dial, the bolts, the access log, the deposit boxes — rendered with the same precision he brought to migrating authentication for 15,000 clients and a payment gateway for 30,000 more.
+Johans's career reads as a real piece of engineering documentation — a `man` page, an RFC, a `git log --graph` — not a marketing page wearing a developer costume. The proof of seniority is that the artifact itself is built the way a senior engineer builds things: precisely, with real interaction (a working command palette, a self-drawing commit graph), zero decoration for its own sake, and every claim rendered in the register that claim actually belongs to — a diff for a number, a commit for a role, a cross-reference for a related technology.
 
-The generic Next.js dev-portfolio (rounded pill nav, pastel gradient blobs, centered avatar with a wave emoji) is the named anti-reference, along with two other ruts explicitly rejected: the corporate-bank site (navy/gold, stock trust iconography) and the neon-on-black AI-portfolio default (glowing accent, near-black, SaaS energy). This system is dark, but matte and mechanical, not glowing.
-
-Content lives in **chambers**, not sections. Inside a chamber, the work (a role, a project) sits alone — unlabeled. Context — who, when, what impact — lives only in the **threshold** band between chambers, so no text ever competes with the thing it describes.
+This replaces "The Vault" (graphite/brass/banking-vault skeuomorphism) entirely. The vault told a story *about* Johans through a metaphor; The Manual demonstrates his actual daily craft by *being* one of the artifacts he produces. Two ruts are explicitly rejected and must not resurface: the generic AI/dev-portfolio default (near-black + single glowing neon accent, blurred edges, `const dev = {...}` hero, fake bash-prompt typing a "whoami" gag), and the previous graphite/brass/banking-mechanism system. Nothing here glows, blurs, or role-plays a terminal typing a joke command — it is typeset like real technical prose and instrumented like a real tool.
 
 **Key Characteristics:**
-- Dark graphite ground with brushed-steel surfaces; brass is the only warm color and it is rationed to headings, active states, and engraved numerals.
-- Verdigris green appears only as the "access granted" / success state — the patina that forms on aged brass, never used decoratively.
-- Type is engraved (display), typed (mono labels/log lines), and read (body) — three distinct registers, never blended.
-- Corners are machined, not soft: 0–4px radius everywhere. No pill shapes survive from the old system.
-- Depth comes from layered steel panels and hairline bevels, never soft drop shadows or blur glows.
+- Near-black ink ground, off-white monospace-first type — the register of real terminal/doc output, not a "hacker aesthetic" skin.
+- Exactly two accent colors, both borrowed from tools this audience uses daily and never used decoratively: GitHub-blue for interactive/link state, git diff green/red reserved *only* for quantified stat callouts (additions) and legacy/removed states.
+- Career history renders as an actual commit graph (git log --graph), not a timeline with dots-and-line filler.
+- Navigation is a real, working command palette (⌘K / Ctrl K) — the primary wayfinding device, not a decorative affordance layered over conventional nav.
+- Zero border-radius, zero drop shadow, zero blur/glow anywhere. Depth comes only from background-value steps (ink → surface-900 → surface-800) and 1px hairline borders.
 
 ## Colors
 
-Matte graphite dominates; brass is committed but rationed — it should read as scarce, engraved metal, not a UI accent color.
-
 ### Primary
-- **Brass** (`#b8874a`): the vault's only warm material. Used for display-type headings, the active clearance-dial indicator, primary button fill, engraved numerals on plaques, and the vault door's mechanism.
+- **Ink** (`#0a0a0a`): base page background.
+- **Fg Primary** (`#e4e4e0`): primary text and structural/mono content on ink.
 
-### Secondary
-- **Verdigris** (`#5c8a72`): the patina a vault's brass grows over time. Reserved exclusively for confirmed/success/"access granted" states (form submit success, active navigation confirmation) — never decorative.
+### Secondary (interactive accent)
+- **Link Blue** (`#58a6ff`): the one interactive-state color — active palette result, focused input border, external link text, active section marker. Never a fill, never a background.
 
-### Tertiary
-- **Alert Red** (`#c96156`): muted oxide red, reserved for error states only (failed form submission). Never bright or saturated — this is corrosion, not a warning light.
+### Tertiary (semantic diff, never decorative)
+- **Diff Add** (`#3fb950` on `rgba(63,185,80,0.08)`): reserved for quantified positive stats only (e.g. `+ 15,000 clients migrated`) and success/sent states. A `+` gutter mark always accompanies it.
+- **Diff Remove** (`#f85149` on `rgba(248,81,73,0.08)`): reserved for error/failed-submission states and "legacy/replaced" callouts (e.g. `- Keycloak on-premise`). A `-` gutter mark always accompanies it.
 
 ### Neutral
-- **Void** (`#0b0c0d`): base page background — the vault's ambient darkness.
-- **Graphite 900** (`#16181b`): chamber surfaces, card backgrounds.
-- **Graphite 800** (`#1f2226`): raised panels, the threshold band background.
-- **Steel 700 / 600** (`#2b2f34` / `#3a3f46`): borders, dividers, dial ticks, inactive nav.
-- **Steel 400** (`#818991`): secondary/muted text, timestamps, tags.
-- **Steel 200** (`#b8bcc1`): primary body text on dark.
-- **Paper** (`#f4f2ee`): reserved for the light-mode "lighting on" state, if kept — never the default.
+- **Surface 900 / 800** (`#111214` / `#17181b`): card and raised-panel backgrounds, stepped by one value each.
+- **Border 700 / 600** (`#262a2e` / `#30363d`): hairline dividers, card borders, rules under section heads.
+- **Fg Muted** (`#747c87`): comments, timestamps, hashes, placeholder text.
+- **Fg Secondary** (`#9198a1`): secondary body copy, tag labels.
 
 ### Named Rules
-**The Rationed Brass Rule.** Brass covers no more than ~10% of any viewport. It marks the one thing that matters (an active state, a heading, a CTA) — never a background, never a large fill.
+**The Two-Accent Rule.** Only link-blue and the diff pair carry color. Everything else is grayscale. A third decorative color, or diff-green/red used outside a quantified stat or a state, is a build error.
 
 ## Typography
 
-**Display Font:** Space Grotesk (with IBM Plex Sans, system-ui fallback)
-**Body Font:** DM Sans (with IBM Plex Sans, system-ui fallback)
-**Label/Mono Font:** IBM Plex Mono (with ui-monospace fallback)
-
-**Character:** A geometric, mechanically-drawn display face for anything "engraved" (headings, numerals, plaque titles), a plain humanist sans for anything meant to be read at length (bios, descriptions), and a monospace for anything that reads like instrumentation output (dates, tags, access-log lines, nav indices).
+**Mono Font:** JetBrains Mono (fallback `ui-monospace`, monospace) — every structural element: section heads, nav, labels, hashes, code-like values, buttons, form labels.
+**Body Font:** Inter (fallback `system-ui`, sans-serif) — long-form reading only: bios, role/project descriptions. This is the "rendered markdown" register — prose reads like a pretty-printed README, structure reads like raw doc source.
 
 ### Hierarchy
-- **Display** (600, `clamp(2.25rem, 6vw, 5rem)`, 1.05): Chamber titles, the hero name/role, section-opening statements.
-- **Headline** (600, `clamp(1.5rem, 3vw, 2.25rem)`, 1.15): Sub-chamber headings (e.g. a role title inside Experience).
-- **Title** (500, 1.125rem, 1.3): Card/plaque titles (project names, employer names).
-- **Body** (400, 1.0625rem, 1.65): Bios, project and role descriptions. Max 68ch measure.
-- **Label** (500, 0.8125rem, letter-spacing 0.08em, uppercase): Threshold plaques, tags, dates, nav indices, form field labels — always mono.
+- **Section Head** (700, 0.9375rem, uppercase, mono, 0.02em tracking): `N. TITLE` man-page-style headers. Always paired with a hairline rule directly beneath.
+- **Display Line** (600, `clamp(1.75rem, 4.5vw, 3rem)`, mono, 1.2): the NAME/SYNOPSIS hero line only. This is the single place mono type is allowed to run large — never repeated as a generic "big heading" elsewhere.
+- **Body** (400, 1.0625rem, Inter, 1.7): bios, descriptions. Max 70ch measure.
+- **Label** (500, 0.8125rem, mono): tags, dates, hashes, form labels, palette hints.
 
 ### Named Rules
-**The No-Blend Rule.** Display, body, and label faces never substitute for one another. A label rendered in the body face, or a heading rendered in mono, is a build error.
+**The Register Rule.** Mono is structure and instrumentation; Inter is prose meant to be read at length. A paragraph of bio set in mono, or a section head set in Inter, is a build error — this replaces the old system's No-Blend Rule under the new type pair.
 
 ## Layout
 
-Single continuous vertical corridor (no separate routes) composed of alternating **chambers** (full content, generous padding, 780–860px reading measure, wider for the hero/vault-door and project deposit-box grids) and **thresholds** (full-bleed graphite-800 bands, tighter vertical padding, mono label content only). Spacing scale: 8 / 16 / 32 / 64 / 112px. The rule that governs every heading: more space above it than below it, so headings bond downward to their content.
+Single continuous document (no separate routes), read top to bottom like a man page: NAME → SYNOPSIS → DESCRIPTION (About) → EXPERIENCE (commit graph) → PROJECTS → SKILLS → CONTACT/BUGS → colophon footer. Spacing scale: 8 / 16 / 32 / 64 / 112px, more space above a section head than below it.
 
-Desktop carries a fixed vertical clearance-dial rail (chamber index 00–05) pinned to one side; mobile collapses it to a slim top bar showing only the current chamber's index and a tap-to-expand chamber list. No floating pill nav survives.
+Navigation is not a persistent rail or dial: a slim terminal-titlebar strip stays fixed at the top (traffic-light dots, running header, palette trigger) at every breakpoint — desktop and mobile share the same nav pattern, because the command palette is the real navigation surface, not the strip.
 
 ## Elevation & Depth
 
-No soft drop shadows or blur glows anywhere. Depth is machined: 1px steel-600 hairline borders, a subtle top-lit/bottom-shadowed bevel (two-tone border or thin inset gradient) on plaques and buttons to read as cut metal, and z-axis layering by background value (void → graphite-900 → graphite-800) rather than shadow blur.
+No shadows, no blur, no glow anywhere — not even the accent colors. Depth is background-value stepping (ink → surface-900 → surface-800) plus 1px hairline borders, exactly as strict as the previous system's Flat Metal Rule, now called the Flat Terminal Rule.
 
 ### Named Rules
-**The Flat Metal Rule.** If a panel needs to look "raised," lighten its background one graphite step and give it a hairline border — never add blur-radius shadow.
+**The Flat Terminal Rule.** If a panel needs to look "raised," step its background one surface value and add a 1px border-700 line. Never add shadow, blur, or a glowing ring — including on the accent colors, which stay matte.
 
 ## Shapes
 
-Machined, not soft: 0–2px radius as the default (buttons, plaques, chips), 4px only on large image containers (project screenshots, the vault-door assembly) where a hard corner would look unintentional. No pill/fully-rounded shapes anywhere — this directly reverses the previous system's rounded-full nav and buttons.
+Zero border-radius everywhere, no exceptions — sharper than the previous system's 0–4px allowance. Every panel, button, input, image container, and tag is a hard rectangle. This is load-bearing: it is what keeps the mono/doc register from sliding into generic "dark SaaS" territory.
 
 ## Components
 
-### Buttons
-- **Shape:** 2px radius, rectangular.
-- **Primary:** brass-500 fill, void text, 14px/32px padding, small tick-mark notch at one corner (machined-part detail).
-- **Hover/Focus:** fill shifts to brass-300; focus ring is a 2px offset brass-500 outline, never a glow.
-- **Secondary/Ghost:** transparent fill, steel-200 text, 1px steel-600 border; hover raises border to brass-500.
+### Terminal Titlebar (nav)
+Fixed top strip, all breakpoints: three inert traffic-light dots (decorative chrome, not window controls), centered running header (`NEIRA(1) — SOFTWARE MANUAL — NEIRA(1)`), a palette-trigger button (`⌘K`) right-aligned. A 2px link-blue scroll-progress line sits on the strip's bottom edge.
 
-### Threshold Band (signature component)
-Full-bleed graphite-800 strip between chambers. Mono label content only, three-part layout: chamber index (00–05), context line (employer/dates or project stack), one quantified impact stat where one exists (e.g. "15,000+ clients migrated"). This is the only place captions live — never inside a chamber alongside the work itself.
+### Command Palette (signature component)
+Modal overlay, ⌘K/Ctrl+K or tap-to-open. Fuzzy-filters a flat list of sections, projects, and actions (download CV, copy email, toggle language, open GitHub/LinkedIn). Matched substrings highlight in link-blue; arrow keys + Enter drive it; Esc closes. This is the primary navigation mechanism — no duplicate nav pattern should exist alongside it beyond the minimal section index in the titlebar.
 
-### Cards / Deposit Boxes (projects)
-- **Corner Style:** 2px radius.
-- **Background:** graphite-900 with 1px steel-700 border.
-- **Interaction:** hover translates the box 4–6px on its own axis like a drawer being pulled, revealing a brass handle/keyhole glyph.
-- **Internal Padding:** 24px.
+### Section Head (signature component)
+`N. TITLE` mono uppercase, hairline rule beneath, optional right-aligned kicker and one diff-styled stat when a quantified fact exists. Replaces the old Threshold Band; no full-bleed color fill, a rule is enough.
 
-### Chambers (experience)
-Each role is a numbered vault chamber. The chamber body holds the description; achievement lines render as a monospace "access log" (typed-reveal on scroll into view where motion is enabled).
+### Commit Graph (Experience — signature component)
+Each role renders as a commit node on a single mainline SVG branch, connected by a straight vertical line that draws itself (stroke-dasharray reveal) on scroll into view. Node label carries a decorative short-hash, the role title as commit message, date as author date, employer as a ref tag (`HEAD -> bice-hipotecaria` on the current role). Body expands below with the real description and any diff-styled stat.
+
+### Repo Cards (Projects)
+Title set as `namespace/project` in mono. Tag pills carry a small language-color dot (reused, non-decorative: same hue always maps to the same technology). No fabricated metrics (no star/fork counts) — only real tags, description, and an outbound link.
 
 ### Inputs / Fields (contact)
-- **Style:** flat graphite-900 background, 1px steel-600 border, mono label above field, 2px radius.
-- **Focus:** border shifts to brass-500, no glow.
-- **Success/Error:** border and helper text switch to verdigris-500 / alert-500 respectively — the only places those colors appear.
+Flat surface-900 background, 1px border-600, bracket-prefixed mono label (`> email`), blinking block caret on focus via a step animation, no glow. Border and helper text switch to diff-add/diff-remove on success/error — the only place those colors move outside a stat.
 
-### Navigation (clearance dial)
-Vertical rail, mono numerals 00–05, steel-400 at rest, brass-500 + filled indicator dot for the active chamber. Mobile: collapses to a top strip showing only the active index; tap expands a full list.
+### Buttons
+Rectangular, mono, bracket-flag styling (`[--hire]`, `[--contract]`). Default: transparent fill, border-600, fg-primary text. Hover/focus: fully inverts (fg-primary fill, ink text) — a real terminal selection-invert, not a tint shift.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** ration brass to ≤10% of any viewport (see Rationed Brass Rule).
-- **Do** keep all captions/context in threshold bands, never layered over the work itself.
-- **Do** use hairline borders and background-step layering for depth, never blur shadows.
-- **Do** keep corners machined (0–4px) everywhere.
+- **Do** keep color to exactly link-blue plus the diff pair (see Two-Accent Rule).
+- **Do** let the command palette be the real navigation, not an add-on beside a fuller nav.
+- **Do** render every quantified claim as a diff-styled callout, never as prose alone.
+- **Do** keep every corner sharp (0px) and every depth cue a hairline + value step.
 
 ### Don't:
-- **Don't** use navy or gold-leaf — that renders as literal corporate-bank, the named anti-reference.
-- **Don't** use neon glow, near-black-plus-single-neon-accent — that is the generic AI-portfolio rut, also rejected.
-- **Don't** bring back rounded-full/pill shapes for nav or buttons.
-- **Don't** use verdigris or alert red decoratively — they are reserved for success/error states only.
+- **Don't** add a glow, blur, or gradient to any accent — including the diff colors and link-blue.
+- **Don't** revive graphite/brass/vault language, tokens, or components from the previous system.
+- **Don't** open with a fake bash prompt typing a joke command (`$ whoami`, `const dev = {...}`) — that is the named, rejected generic-portfolio default.
+- **Don't** fabricate metrics (stars, forks, commit counts) anywhere real numbers aren't on hand.

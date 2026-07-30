@@ -6,9 +6,7 @@
       "Projects": "Projects",
       "Skills": "Skills",
       "Experience": "Experience",
-      "Contact": "Contact",
-      "MobileOpen": "Chambers",
-      "MobileClose": "Close"
+      "Contact": "Contact"
     }
   },
   "Intro": {
@@ -30,7 +28,6 @@
   "Projects": {
     "Title": "My Projects",
     "Kicker": "Deposit boxes",
-    "BoxLabel": "Box {number}",
     "Revius": "Lets users create and edit reviews about certain products on the internet, it also has the data of the reviews from other retailers websites. (Still in development)",
     "Sorted Collections": "Open-source library for JavaScript/TypeScript with SortedList, SortedSet, and SortedMap — zero runtime dependencies, inspired by Python's sortedcontainers.",
     "Datoteca": "TypeScript library for generating realistic and localized test data for Chile",
@@ -82,5 +79,17 @@
     "MessagePlaceholder": "Your message",
     "Submit": "Submit",
     "EmailSuccess": "Email sent successfully!"
+  },
+  "Palette": {
+    "Open": "Open command palette",
+    "Placeholder": "Type a command or search a section...",
+    "NoResults": "No results",
+    "DownloadCv": "Download CV",
+    "CopyEmail": "Copy email",
+    "CopiedEmail": "Email copied to clipboard",
+    "SwitchToEs": "Switch language to Spanish",
+    "SwitchToEn": "Switch language to English",
+    "OpenGithub": "Open GitHub",
+    "OpenLinkedin": "Open LinkedIn"
   }
 }

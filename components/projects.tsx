@@ -17,6 +17,9 @@ export default function Projects() {
         title={t("Title")}
         context={t("Kicker")}
       />
+      <p className="mb-6 font-mono text-xs text-fg-muted">
+        $ ls ~/projects --sort=recent
+      </p>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {projectsData.map((project, index) => (
           <Project key={project.title} index={index} {...project} />

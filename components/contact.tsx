@@ -21,17 +21,17 @@ export default function Contact() {
       <Threshold section="Contact" title={t("Title")} context={t("Kicker")} />
 
       <motion.div
-        className="bevel-inset bg-graphite-900 p-5 sm:p-8"
+        className="border border-border-700 bg-surface-900 p-5 sm:p-8"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-10%" }}
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
       >
-        <p className="leading-relaxed text-steel-400">
+        <p className="font-body leading-relaxed text-fg-secondary">
           {t.rich("Subtitle", {
             a: (chunk) => (
               <a
-                className="text-brass-300 underline underline-offset-2"
+                className="text-link-500 underline underline-offset-2"
                 href="mailto:johansneirap@gmail.com"
               >
                 {chunk}
@@ -55,11 +55,14 @@ export default function Contact() {
           }}
         >
           <label className="flex flex-col gap-2">
-            <span className="plaque-label text-steel-400">
+            <span className="label text-fg-muted">
+              <span aria-hidden className="text-link-500">
+                &gt;
+              </span>{" "}
               {t("EmailPlaceholder")}
             </span>
             <input
-              className="h-12 border border-steel-600 bg-void px-4 text-steel-200 outline-none transition-colors placeholder:text-steel-400 focus:border-brass-500"
+              className="h-12 border border-border-600 bg-ink px-4 font-mono text-fg-primary outline-none transition-colors placeholder:text-fg-muted focus:border-link-500"
               name="senderEmail"
               type="email"
               required
@@ -69,11 +72,14 @@ export default function Contact() {
           </label>
 
           <label className="flex flex-col gap-2">
-            <span className="plaque-label text-steel-400">
+            <span className="label text-fg-muted">
+              <span aria-hidden className="text-link-500">
+                &gt;
+              </span>{" "}
               {t("MessagePlaceholder")}
             </span>
             <textarea
-              className="h-40 resize-none border border-steel-600 bg-void p-4 text-steel-200 outline-none transition-colors placeholder:text-steel-400 focus:border-brass-500"
+              className="h-40 resize-none border border-border-600 bg-ink p-4 font-mono text-fg-primary outline-none transition-colors placeholder:text-fg-muted focus:border-link-500"
               name="message"
               placeholder={t("MessagePlaceholder")}
               required

@@ -8,40 +8,40 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        void: "#0b0c0d",
-        graphite: {
-          900: "#16181b",
-          800: "#1f2226",
+        ink: "#0a0a0a",
+        surface: {
+          900: "#111214",
+          800: "#17181b",
         },
-        steel: {
-          700: "#2b2f34",
-          600: "#3a3f46",
-          400: "#818991",
-          200: "#b8bcc1",
+        border: {
+          700: "#262a2e",
+          600: "#30363d",
         },
-        paper: "#f4f2ee",
-        brass: {
-          700: "#8a6435",
-          500: "#b8874a",
-          300: "#d9b479",
+        fg: {
+          muted: "#747c87",
+          secondary: "#9198a1",
+          primary: "#e4e4e0",
         },
-        verdigris: {
-          500: "#5c8a72",
+        link: {
+          500: "#58a6ff",
         },
-        alert: {
-          500: "#c96156",
+        diff: {
+          add: "#3fb950",
+          "add-bg": "rgba(63,185,80,0.08)",
+          remove: "#f85149",
+          "remove-bg": "rgba(248,81,73,0.08)",
         },
       },
       fontFamily: {
-        display: ["var(--font-display)", "IBM Plex Sans", "sans-serif"],
-        body: ["var(--font-body)", "IBM Plex Sans", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+        body: ["var(--font-body)", "system-ui", "sans-serif"],
       },
       borderRadius: {
         none: "0px",
-        sm: "2px",
-        DEFAULT: "2px",
-        md: "4px",
+        DEFAULT: "0px",
+        sm: "0px",
+        md: "0px",
+        lg: "0px",
       },
       spacing: {
         18: "4.5rem",
@@ -50,9 +50,18 @@ module.exports = {
       letterSpacing: {
         widest2: "0.2em",
       },
-      backgroundImage: {
-        "brushed-steel":
-          "repeating-linear-gradient(100deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 3px)",
+      keyframes: {
+        caret: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0" },
+        },
+        "draw-line": {
+          from: { strokeDashoffset: "var(--line-length)" },
+          to: { strokeDashoffset: "0" },
+        },
+      },
+      animation: {
+        caret: "caret 1s step-end infinite",
       },
     },
   },

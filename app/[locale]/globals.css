@@ -4,36 +4,50 @@
 
 @layer base {
   ::selection {
-    background-color: #b8874a;
-    color: #0b0c0d;
+    background-color: #58a6ff;
+    color: #0a0a0a;
   }
 
   body {
-    background-color: #0b0c0d;
+    background-color: #0a0a0a;
   }
 }
 
 @layer components {
-  .plaque-label {
+  .label {
     font-family: var(--font-mono), ui-monospace, monospace;
     font-size: 0.8125rem;
     font-weight: 500;
-    letter-spacing: 0.08em;
+  }
+
+  .section-head {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
   }
 
-  .bevel {
-    border: 1px solid #3a3f46;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.03),
-      rgba(0, 0, 0, 0.08)
-    );
+  .diff-add {
+    background-color: rgba(63, 185, 80, 0.08);
+    color: #3fb950;
   }
 
-  .bevel-inset {
-    border: 1px solid #2b2f34;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02),
-      inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  .diff-remove {
+    background-color: rgba(248, 81, 73, 0.08);
+    color: #f85149;
+  }
+
+  .caret::after {
+    content: "\2588";
+    display: inline-block;
+    margin-left: 2px;
+    animation: caret 1s step-end infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .caret::after {
+    animation: none;
   }
 }
