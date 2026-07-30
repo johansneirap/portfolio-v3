@@ -31,6 +31,11 @@ module.exports = {
           remove: "#f85149",
           "remove-bg": "rgba(248,81,73,0.08)",
         },
+        traffic: {
+          red: "#f85149",
+          yellow: "#d29922",
+          green: "#3fb950",
+        },
       },
       fontFamily: {
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],

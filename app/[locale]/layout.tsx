@@ -25,11 +25,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Johans Neira | Ingeniero de Software",
   description:
-    "Johans Neira — desarrollador full-stack que ha liderado migraciones de autenticación y pagos para bancos en producción.",
+    "Johans Neira — desarrollador fullstack que ha liderado migraciones de autenticación y pagos para bancos en producción.",
   openGraph: {
     title: "Johans Neira | Ingeniero de Software",
     description:
-      "Johans Neira — desarrollador full-stack que ha liderado migraciones de autenticación y pagos para bancos en producción.",
+      "Johans Neira — desarrollador fullstack que ha liderado migraciones de autenticación y pagos para bancos en producción.",
     url: "https://johansneira.site",
     siteName: "Johans Neira",
     locale: "en_US",

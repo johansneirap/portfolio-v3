@@ -11,7 +11,7 @@
   },
   "Intro": {
     "Title": "Hello, I'm Johans.",
-    "Text": "I'm a <b>full-stack developer</b> with <b>+5 years</b> of experience. I enjoy building <i>sites</i> & <i>apps</i>. My focus is in <u>JS/TS</u> world.",
+    "Text": "I'm a <b>fullstack software engineer</b> with <b>+5 years</b> of experience. I enjoy building <i>sites</i> & <i>apps</i>. My focus is in <u>JS/TS</u> world.",
     "Contact": "Contact me here",
     "Download": "Download CV",
     "StatusLocked": "Verifying credentials",
@@ -20,14 +20,15 @@
   "About": {
     "Title": "About me",
     "Kicker": "Identity file",
-    "Bio1": "I am a dedicated code enthusiast and a passionate programmer, deeply committed to upholding the principles of best practices and clean code architecture.",
-    "Bio2": "Beyond the realm of code and projects, I am ceaselessly driven by an insatiable thirst for personal and professional growth. Each day presents an opportunity to surpass yesterday's version of myself, as I tirelessly strive for self-improvement. This journey embodies my enduring commitment to mastery in both personal and professional aspects.",
-    "Bio3": "My reverence for programming goes beyond its utilitarian function; it is a medium through which I stimulate my intellect, conquer challenges, and foster creativity. This profession is not just a livelihood; it is a lifelong commitment that continually nurtures my mind through problem-solving and dynamic challenges.",
-    "Bio4": "Join me as we explore the intricate symphony of code, creativity, and unwavering growth. Let's collaboratively transform challenges into triumphs and lines of code into exceptional solutions."
+    "Bio1": "Fullstack Software Engineer with 5+ years of experience, focused on mission-critical systems: authentication, payments, and internal platforms for banking and fintech.",
+    "Bio2": "I've led auth migrations and payment-gateway rollouts for 45,000+ active clients, and teams of up to 6 developers on integration projects during bank mergers.",
+    "Bio3": "Outside that track, I've built analytics dashboards for brands like Diageo, Heineken, and Walmart US, and maintain a couple of open-source JavaScript/TypeScript libraries.",
+    "Bio4": "I care about clean code and architecture decisions that hold up in production, not just in the demo. If you need someone to take a system from zero to stable, let's talk."
   },
   "Projects": {
     "Title": "My Projects",
     "Kicker": "Deposit boxes",
+    "Renduo": "SaaS that turns the React components a team already maintains into a PDF-generation API: invoices, reports, and contracts from any backend with a single HTTP call, no separate template language to keep in sync.",
     "Revius": "Lets users create and edit reviews about certain products on the internet, it also has the data of the reviews from other retailers websites. (Still in development)",
     "Sorted Collections": "Open-source library for JavaScript/TypeScript with SortedList, SortedSet, and SortedMap — zero runtime dependencies, inspired by Python's sortedcontainers.",
     "Datoteca": "TypeScript library for generating realistic and localized test data for Chile",
@@ -42,7 +43,7 @@
     "Kicker": "Access log",
     "Stat": "45,000+ clients across migrated systems",
     "Graduated Computer Science": {
-      "Title": "Graduado de Ingeniería en Informática",
+      "Title": "Graduated in Computer Science",
       "Description": "I graduated after 4 years of studying. I immediately found a job as a web developer."
     },
     "Freelance Web Developer": {

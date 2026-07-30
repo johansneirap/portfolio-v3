@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="mt-16 w-full max-w-3xl border-t border-border-700 px-4 py-6">
       <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-xs text-fg-muted">
-        <span>NEIRA(1)</span>
+        <span>JOHANS(1)</span>
         <span>Software Manual</span>
         <span>{today}</span>
       </div>

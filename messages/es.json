@@ -11,7 +11,7 @@
   },
   "Intro": {
     "Title": "Hola, mi nombre es Johans.",
-    "Text": "Soy un desarrollador web <b>full-stack developer</b> con <b>+5 años</b> de experiencia. Disfruto construyendo <i>sitios</i> y <i>apps</i>. Mi enfoque está en el mundo de <u>Javascript/Typescript</u>.",
+    "Text": "Soy <b>ingeniero de software fullstack</b> con <b>+5 años</b> de experiencia. Disfruto construyendo <i>sitios</i> y <i>apps</i>. Mi enfoque está en el mundo de <u>Javascript/Typescript</u>.",
     "Contact": "Contáctame aquí",
     "Download": "Descargar CV",
     "StatusLocked": "Verificando credenciales",
@@ -20,14 +20,15 @@
   "About": {
     "Title": "Sobre mí",
     "Kicker": "Ficha de identidad",
-    "Bio1": "Soy un entusiasta comprometido con el código y un programador apasionado, profundamente dedicado a mantener los principios de las mejores prácticas y la arquitectura de código limpio.",
-    "Bio2": "Más allá del ámbito del código y los proyectos, me impulsa una sed insaciable de crecimiento personal y profesional. Cada día presenta una oportunidad para superar al yo de ayer, mientras me esfuerzo incansablemente por la auto-superación. Este viaje es una encarnación de mi compromiso perdurable con el dominio tanto en facetas personales como profesionales.",
-    "Bio3": "Mi reverencia por la programación va más allá de su función utilitaria, es un medio a través del cual estimulo mi intelecto, conquisto desafíos y fomento la creatividad. Esta profesión no es solo un medio de vida; es un compromiso de por vida que nutre continuamente mi mente a través de la resolución de problemas y obstáculos dinámicos.",
-    "Bio4": "Acompáñame mientras exploramos la intrincada sinfonía del código, la creatividad y el crecimiento inquebrantable. Transformemos colaborativamente desafíos en triunfos y líneas de código en soluciones excepcionales."
+    "Bio1": "Ingeniero de software fullstack con más de 5 años de experiencia, con foco en sistemas de misión crítica: autenticación, pagos y plataformas internas para banca y fintech.",
+    "Bio2": "He liderado migraciones de auth y rollouts de pasarelas de pago para más de 45.000 clientes activos, y equipos de hasta 6 desarrolladores en proyectos de integración durante fusiones bancarias.",
+    "Bio3": "Fuera de ese track, construí dashboards de analítica para marcas como Diageo, Heineken y Walmart US, y mantengo un par de librerías open-source en JavaScript/TypeScript.",
+    "Bio4": "Me interesa el código limpio y las decisiones de arquitectura que se sostienen en producción, no solo en el demo. Si buscas a alguien que lleve un sistema de cero a estable, hablemos."
   },
   "Projects": {
     "Title": "Mis Proyectos",
     "Kicker": "Cajas de depósito",
+    "Renduo": "SaaS que convierte los componentes React que un equipo ya mantiene en una API de generación de PDFs: factura, reportes y contratos desde cualquier backend con una sola llamada HTTP, sin plantillas separadas que mantener sincronizadas.",
     "Revius": "Permite a los usuarios crear y editar reseñas sobre ciertos productos en Internet, también cuenta con los datos de reseñas de otras páginas web de minoristas. (Todavía en desarrollo)",
     "Sorted Collections": "Librería de código abierto para JavaScript/TypeScript con SortedList, SortedSet y SortedMap — sin dependencias en tiempo de ejecución, inspirada en las sortedcontainers de Python.",
     "Datoteca": "Librería TypeScript para generar datos de prueba realistas y localizados de Chile",
@@ -50,17 +51,17 @@
       "Description": "Trabajé como desarrollador web independiente durante aproximadamente 3 años, donde creé varias páginas y sitios web, páginas de inicio y un sistema de mantenimiento de usuarios para un servidor privado del juego Lineage 2. También amplié mis habilidades para abarcar el desarrollo full stack."
     },
     "Full-Stack Developer": {
-      "Title": "Desarrollador Full-Stack",
+      "Title": "Desarrollador Fullstack",
       "Description": "Trabajé como desarrollador full stack en Evalueserve Chile. Mi conjunto de herramientas incluye React, Next.js, TypeScript, Tailwind, Prisma y MongoDB."
     },
 
     "Software Developer at Evalueserve Chile":{
       "Title": "Desarrollador de Software en Evalueserve Chile",
-      "Description": "Trabajé como desarrollador full-stack en aplicaciones para clientes como Diageo, Heineken y Gates Ventures, con foco en visualización de datos y dashboards de análisis para la toma de decisiones."
+      "Description": "Trabajé como desarrollador fullstack en aplicaciones para clientes como Diageo, Heineken y Gates Ventures, con foco en visualización de datos y dashboards de análisis para la toma de decisiones."
     },
     "Senior Developer at Evalueserve Chile":{
       "Title": "Desarrollador Senior en Evalueserve Chile",
-      "Description": "Como desarrollador senior, trabajé en aplicaciones full-stack para clientes como Walmart US, Intuit India y McDonald's US, integrando grandes cantidades de datos para la generación de dashboards y visualizaciones avanzadas."
+      "Description": "Como desarrollador senior, trabajé en aplicaciones fullstack para clientes como Walmart US, Intuit India y McDonald's US, integrando grandes cantidades de datos para la generación de dashboards y visualizaciones avanzadas."
     },
     "Senior Software Engineer | Tech Lead at BICE Hipotecaria":{
       "Title": "Ingeniero de Software Senior | Líder Técnico en BICE Hipotecaria",

@@ -1,12 +1,19 @@
 "use client";
 
 import { projectsData } from "@/lib/data";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
-type ProjectProps = (typeof projectsData)[number] & { index: number };
+type ProjectProps = {
+  title: string;
+  tags: readonly string[];
+  imageUrl: string | StaticImageData;
+  siteUrl: string;
+  gallery?: readonly { label: string; src: string }[];
+  index: number;
+};
 
 const LANG_COLORS: Record<string, string> = {
   JavaScript: "#f1e05a",
@@ -24,6 +31,7 @@ export default function Project({
   siteUrl,
   tags,
   imageUrl,
+  gallery,
   index,
 }: ProjectProps) {
   const t = useTranslations("Projects");
@@ -81,6 +89,30 @@ export default function Project({
               </li>
             ))}
           </ul>
+
+          {gallery && gallery.length > 0 && (
+            <ul className="mt-4 grid grid-cols-2 gap-2">
+              {gallery.map((shot) => (
+                <li
+                  key={shot.label}
+                  className="overflow-hidden border border-border-700 bg-ink"
+                >
+                  <div className="relative aspect-video">
+                    <Image
+                      src={shot.src}
+                      alt={`${title} — ${shot.label} screenshot`}
+                      className="object-cover object-top"
+                      sizes="(max-width: 640px) 50vw, 25vw"
+                      fill
+                    />
+                  </div>
+                  <p className="border-t border-border-700 px-2 py-1 font-mono text-[0.6875rem] text-fg-muted">
+                    {shot.label}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </Link>
     </motion.div>

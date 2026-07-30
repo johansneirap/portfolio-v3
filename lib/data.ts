@@ -32,13 +32,6 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated Computer Science",
-    location: "Viña del Mar, CL",
-    description:
-      "I graduated after 4 years of studying. I immediately found a job as a web developer.",
-    date: "2018 - 2021",
-  },
-  {
     title: "Freelance Web Developer",
     location: "Villa Alemana, CL",
     description:
@@ -46,10 +39,17 @@ export const experiencesData = [
     date: "2018 - 2021",
   },
   {
+    title: "Graduated Computer Science",
+    location: "Viña del Mar, CL",
+    description:
+      "I graduated after 4 years of studying. I immediately found a job as a web developer.",
+    date: "2018 - 2021",
+  },
+  {
     title: "Software Developer at Evalueserve Chile",
     location: "Viña del Mar, CL",
     description:
-      "I'm now a full-stack developer working at Evalueserve Chile. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB.",
+      "I wroked as a fullstack developer working at Evalueserve Chile. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB.",
     date: "2021 - 2022",
   },
   {
@@ -76,6 +76,16 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: "Renduo",
+    tags: ["SaaS", "React", "TypeScript", "API"],
+    imageUrl: "/renduo/landing.png",
+    siteUrl: "https://renduo.dev",
+    gallery: [
+      { label: "dashboard.png", src: "/renduo/dashboard.png" },
+      { label: "docs.png", src: "/renduo/docs.png" },
+    ],
+  },
   {
     title: "Sorted Collections",
     tags: ["Open-source", "JavaScript", "Typescript"],

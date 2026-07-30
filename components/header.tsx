@@ -12,6 +12,7 @@ function toIndex(i: number) {
 export default function Header() {
   const { activeSection } = useActiveSectionContext();
   const t = useTranslations("Index.Header");
+  const p = useTranslations("Palette");
   const [progress, setProgress] = useState(0);
 
   const activeIndex = links.findIndex((l) => l.name === activeSection);
@@ -30,23 +31,32 @@ export default function Header() {
   return (
     <header
       className="fixed left-0 right-0 top-0 z-[900] h-10 border-b border-border-700 bg-ink"
-      aria-label="NEIRA(1) manual navigation"
+      aria-label="JOHANS(1) manual navigation"
     >
       <div className="mx-auto flex h-full max-w-5xl items-center justify-between px-3 sm:px-6">
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1.5" aria-hidden>
-            <span className="h-2 w-2 rounded-full border border-border-600" />
-            <span className="h-2 w-2 rounded-full border border-border-600" />
-            <span className="h-2 w-2 rounded-full border border-border-600" />
+            <span className="h-2 w-2 rounded-full bg-traffic-red" />
+            <span className="h-2 w-2 rounded-full bg-traffic-yellow" />
+            <span className="h-2 w-2 rounded-full bg-traffic-green" />
           </div>
           <span className="hidden font-mono text-[0.6875rem] uppercase tracking-widest2 text-fg-muted sm:inline">
-            NEIRA(1) — SOFTWARE MANUAL — NEIRA(1)
+            JOHANS(1) — SOFTWARE MANUAL — JOHANS(1)
           </span>
         </div>
 
-        <span className="font-mono text-xs tabular-nums text-fg-secondary">
-          {toIndex(Math.max(activeIndex, 0))} · {t(activeSection)}
-        </span>
+        <div className="flex items-center gap-3">
+          <span className="font-mono text-xs tabular-nums text-fg-secondary">
+            {toIndex(Math.max(activeIndex, 0))} · {t(activeSection)}
+          </span>
+          <button
+            onClick={() => window.dispatchEvent(new Event("open-command-palette"))}
+            aria-label={p("Open")}
+            className="flex h-6 shrink-0 items-center gap-1.5 border border-border-600 bg-surface-900 px-2 font-mono text-xs text-fg-secondary transition-colors hover:border-link-500 hover:text-link-500"
+          >
+            <span aria-hidden>⌘K</span>
+          </button>
+        </div>
       </div>
 
       <div

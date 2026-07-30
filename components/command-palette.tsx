@@ -146,16 +146,16 @@ export default function CommandPalette() {
     if (open) inputRef.current?.focus();
   }, [open]);
 
+  useEffect(() => {
+    function onOpenEvent() {
+      setOpen(true);
+    }
+    window.addEventListener("open-command-palette", onOpenEvent);
+    return () => window.removeEventListener("open-command-palette", onOpenEvent);
+  }, []);
+
   return (
     <>
-      <button
-        onClick={() => setOpen(true)}
-        aria-label={p("Open")}
-        className="fixed right-4 top-2 z-[999] flex h-6 items-center gap-1.5 border border-border-600 bg-surface-900 px-2 font-mono text-xs text-fg-secondary transition-colors hover:border-link-500 hover:text-link-500"
-      >
-        <span aria-hidden>⌘K</span>
-      </button>
-
       {open && (
         <div
           className="fixed inset-0 z-[1000] flex items-start justify-center bg-ink/80 px-4 pt-24 sm:pt-32"

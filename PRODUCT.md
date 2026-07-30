@@ -9,18 +9,18 @@ web
 ## Users
 
 Two audiences with equal priority:
-- **Recruiters / hiring managers** evaluating Johans for senior software engineering roles (full-stack, tech lead).
+- **Recruiters / hiring managers** evaluating Johans for senior software engineering roles (fullstack, tech lead).
 - **Freelance / direct clients** considering hiring him for contract project work.
 
 Both audiences should be able to quickly assess his seniority and track record, and have a clear path to contact him or get his CV.
 
 ## Product Purpose
 
-Personal portfolio for Johans Neira, a full-stack developer based in Chile (Viña del Mar / Villa Alemana). Its job is to establish credibility with both hiring managers and freelance clients and convert a visit into a contact (email/contact form) or a CV download.
+Personal portfolio for Johans Neira, a fullstack developer based in Chile (Viña del Mar / Villa Alemana). Its job is to establish credibility with both hiring managers and freelance clients and convert a visit into a contact (email/contact form) or a CV download.
 
 ## Positioning
 
-Primary differentiator: **banking/fintech experience combined with technical leadership** — concretely, leading the Keycloak-to-Auth0 auth migration for 15,000+ clients and the Toku payment gateway rollout for 30,000+ clients at BICE Hipotecaria as Tech Lead, plus senior engineering work at Scotiabank Chile. This is what a generic full-stack developer profile cannot truthfully claim.
+Primary differentiator: **banking/fintech experience combined with technical leadership** — concretely, leading the Keycloak-to-Auth0 auth migration for 15,000+ clients and the Toku payment gateway rollout for 30,000+ clients at BICE Hipotecaria as Tech Lead, plus senior engineering work at Scotiabank Chile. This is what a generic fullstack developer profile cannot truthfully claim.
 
 Secondary, supporting narrative (do not let it outweigh the primary one): data visualization / analytics dashboards for large enterprise clients (Diageo, Heineken, Walmart US, Intuit India, McDonald's US) via Evalueserve Chile.
 

@@ -127,7 +127,7 @@ Zero border-radius everywhere, no exceptions — sharper than the previous syste
 ## Components
 
 ### Terminal Titlebar (nav)
-Fixed top strip, all breakpoints: three inert traffic-light dots (decorative chrome, not window controls), centered running header (`NEIRA(1) — SOFTWARE MANUAL — NEIRA(1)`), a palette-trigger button (`⌘K`) right-aligned. A 2px link-blue scroll-progress line sits on the strip's bottom edge.
+Fixed top strip, all breakpoints: three inert traffic-light dots (decorative chrome, not window controls), centered running header (`JOHANS(1) — SOFTWARE MANUAL — JOHANS(1)`), a palette-trigger button (`⌘K`) right-aligned. A 2px link-blue scroll-progress line sits on the strip's bottom edge.
 
 ### Command Palette (signature component)
 Modal overlay, ⌘K/Ctrl+K or tap-to-open. Fuzzy-filters a flat list of sections, projects, and actions (download CV, copy email, toggle language, open GitHub/LinkedIn). Matched substrings highlight in link-blue; arrow keys + Enter drive it; Esc closes. This is the primary navigation mechanism — no duplicate nav pattern should exist alongside it beyond the minimal section index in the titlebar.
