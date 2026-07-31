@@ -22,7 +22,7 @@ const inter = Inter({
   variable: "--font-body",
 });
 
-const SITE_URL = "https://byjohans.dev";
+const SITE_URL = "https://www.byjohans.dev";
 const TITLE = "Johans Neira | Ingeniero de Software";
 const DESCRIPTION =
   "Johans Neira — desarrollador fullstack que ha liderado migraciones de autenticación y pagos para bancos en producción.";
@@ -61,6 +61,10 @@ export function generateMetadata({
       description: DESCRIPTION,
     },
   };
+}
+
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "es" }];
 }
 
 export default async function RootLayout({
