@@ -22,20 +22,46 @@ const inter = Inter({
   variable: "--font-body",
 });
 
-export const metadata: Metadata = {
-  title: "Johans Neira | Ingeniero de Software",
-  description:
-    "Johans Neira — desarrollador fullstack que ha liderado migraciones de autenticación y pagos para bancos en producción.",
-  openGraph: {
-    title: "Johans Neira | Ingeniero de Software",
-    description:
-      "Johans Neira — desarrollador fullstack que ha liderado migraciones de autenticación y pagos para bancos en producción.",
-    url: "https://johansneira.site",
-    siteName: "Johans Neira",
-    locale: "en_US",
-    type: "website",
-  },
-};
+const SITE_URL = "https://byjohans.dev";
+const TITLE = "Johans Neira | Ingeniero de Software";
+const DESCRIPTION =
+  "Johans Neira — desarrollador fullstack que ha liderado migraciones de autenticación y pagos para bancos en producción.";
+
+export function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Metadata {
+  const path = locale === "en" ? "/" : `/${locale}`;
+  const ogLocale = locale === "es" ? "es_ES" : "en_US";
+
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: TITLE,
+    description: DESCRIPTION,
+    alternates: {
+      canonical: path,
+      languages: {
+        en: "/",
+        es: "/es",
+      },
+    },
+    themeColor: "#0a0a0a",
+    openGraph: {
+      title: TITLE,
+      description: DESCRIPTION,
+      url: path,
+      siteName: "Johans Neira",
+      locale: ogLocale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: TITLE,
+      description: DESCRIPTION,
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -56,6 +82,22 @@ export default async function RootLayout({
       className={`!scroll-smooth ${jetbrainsMono.variable} ${inter.variable}`}
     >
       <body className="font-body bg-ink text-fg-primary relative selection:bg-link-500 selection:text-ink pt-10">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Johans Neira",
+              jobTitle: "Ingeniero de Software",
+              url: SITE_URL,
+              sameAs: [
+                "https://www.linkedin.com/in/johans-neira/",
+                "https://github.com/johansneirap",
+              ],
+            }),
+          }}
+        />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ActiveSectionContextProvider>
             <Header />
