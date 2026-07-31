@@ -59,6 +59,7 @@ export function generateMetadata({
       card: "summary_large_image",
       title: TITLE,
       description: DESCRIPTION,
+      site: "@johansen_js",
     },
   };
 }
